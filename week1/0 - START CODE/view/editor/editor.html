@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+	<body>
+		<header class="flex justify-between items-center py-4 px-10 bg-slate-200">
+			<div class="head-left flex items-center space-x-4">
+				<div class="w-16 h-16">
+					<img src="../../img/logo.png" alt="Logo" />
+				</div>
+				<h1 class="text-2xl font-bold">Quiz app</h1>
+			</div>
+			<div class="head-right space-x-4">
+				<a href="../editor/editor.html">
+					<button
+						class="edit-quiz bg-purple-500 text-white px-6 py-2 rounded font-semibold hover:bg-purple-600"
+					>
+						Edit quiz
+					</button>
+				</a>
+				<a href="../player/player.html">
+					<button
+						class="play-quiz border border-purple-500 text-purple-500 px-6 py-2 rounded font-semibold hover:bg-purple-100"
+					>
+						Play quiz
+					</button>
+				</a>
+			</div>
+		</header>
+		<main class="main-content flex flex-col p-10 w-full">
+			<div>
+				<button
+					id="createQuestion"
+					class="bg-purple-500 text-white text-2xl font-semibold rounded-md px-6 py-2"
+				>
+					Create new Question
+				</button>
+			</div>
+			<div id="questionsList" class="mt-6 space-y-4">
+				<!-- Questions will be dynamically added here -->
+			</div>
+
+			<section
+				class="create-new-question flex flex-col mt-10 max-w-lg rounded-t-md self-center hidden"
+			>
+				<h2 class="bg-purple-500 text-white px-4 py-2 text-2xl rounded-t-md">
+					Create New Question
+				</h2>
+				<form
+					id="createForm"
+					action=""
+					class="py-5 px-4 bg-slate-100 flex flex-col gap-4"
+				>
+					<label for="">
+						<span class="text-lg">Question:</span>
+						<input type="" id="newQuestionText" class="border p-2 w-full" />
+					</label>
+					<label for="" class="flex flex-col gap-2">
+						<span class="text-lg">Display answer :</span>
+						<input type="text" id="answer1" class="border p-2 w-full" />
+						<input type="text" id="answer2" class="border p-2 w-full" />
+						<input type="text" id="answer3" class="border p-2 w-full" />
+						<input type="text" id="answer4" class="border p-2 w-full" />
+					</label>
+					<label for="">
+						<span class="text-lg">Correct Answer (A, B, C, or D):</span>
+						<input type="text" id="correctAnswer" class="border p-2 w-full" />
+					</label>
+					<div class="flex gap-4 w-full justify-end">
+						<button
+							type="button"
+							id="cancelBtn"
+							class="bg-purple-500 px-4 py-2 rounded text-white"
+						>
+							Cancel
+						</button>
+						<button
+							type="submit"
+							id="addBtn"
+							class="bg-purple-500 text-white px-4 py-2 rounded"
+						>
+							Add Question
+						</button>
+					</div>
+				</form>
+			</section>
+			<script src="editor.js"></script>
+		</main>
+	</body>
+</html>
