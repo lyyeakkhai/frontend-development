@@ -1,9 +1,11 @@
-import React from 'react'
 
 const Statistic = ({ student }) => {
-    const average = student.reduce((acc, curr) => acc + curr.score, 0) / student.length;
-    const max = Math.max(...student.map(s => s.score));
-    const min = Math.min(...student.map(s => s.score));
+
+    const studentScores = student.map(s => s.score);
+
+    const average = studentScores.reduce((a, b) => a + b, 0) / studentScores.length;
+    const max = Math.max(...studentScores);
+    const min = Math.min(...studentScores);
   return (
     <div className="statistics">
       <h2>Statistics</h2>
