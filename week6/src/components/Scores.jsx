@@ -20,7 +20,7 @@ const Scores = ({ courseName, students }) => {
                     <tr key={index}>
                         <td>{student.firstName}</td>
                         <td>{student.lastName}</td>
-                        <td>{student.score}</td>
+                        {student.score >= 50 ? <td>{student.score}</td> : <td className='warning'>{student.score}</td>}
                     </tr>
                 )
             })}
