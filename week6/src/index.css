@@ -105,6 +105,13 @@ body {
   font-size: 1rem;
   color: var(--grey-color);
 }
+.scoreCtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px;
+}
+
 
 .warning {
   color: var(--secondary-color);

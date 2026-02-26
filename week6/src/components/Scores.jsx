@@ -1,7 +1,8 @@
 import React from 'react'
+import Statistic from './Statistic';
 
 const Scores = ({ courseName, students }) => {
-    
+
   return (
    <div className="scores">
           <h1>{courseName}</h1>
@@ -24,8 +25,10 @@ const Scores = ({ courseName, students }) => {
                     </tr>
                 )
             })}
+
             </tbody>
           </table>
+          <Statistic student={students} />
         </div>
   )
 }
