@@ -89,3 +89,6 @@ main {
 .arrow-right {
   right: 1rem;
 }
+.decrease-opacity {
+  opacity: 0.5;
+}
